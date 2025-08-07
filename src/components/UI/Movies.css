@@ -13,6 +13,26 @@ body {
     align-items: center;
     gap: 12px;
 }
+.heroContainer h1{
+  color: white;
+}
+.nextPreviousContainer{
+  display: flex;
+  flex-direction: row;
+  color: #e0e0e0;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  font-weight: 800;
+  gap: 6px;
+}
+.clickPrevious{
+  cursor: pointer;
+
+}
+.clickNext{
+  cursor: pointer;
+}
 .heroContainer ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
