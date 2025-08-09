@@ -16,7 +16,7 @@ export const Details = ({ data }) => {
           <div className="detailsContainer">
             <p>Title: {Title}</p>
           </div>
-            <button onClick={handleWatchNowButtonClick}>Watch Now</button>
+            <button onClick={handleWatchNowButtonClick}>See Mutahir</button>
         </div>
       </li>
     </>
