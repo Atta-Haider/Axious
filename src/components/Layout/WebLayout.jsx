@@ -10,7 +10,7 @@ export const WebLayout = () =>{
         return(<>
     <Header/>
     <Outlet/>
-    <Footer/>
+    {/* <Footer/> */}
     </>)
 }
 }

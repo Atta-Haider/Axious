@@ -4,7 +4,6 @@ import "./Movies.css";
 import { getMovies } from "../../Services/services";
 import { FcNext } from "react-icons/fc";
 import { FcPrevious } from "react-icons/fc";
-import axios from "axios";
 
 export const Movies = () => {
   const [data, setData] = useState([]);
@@ -13,7 +12,6 @@ export const Movies = () => {
   const fetchData = async () => {
     try {
       const res = await getMovies([page]);
-      console.log(res.data);
       setData(res.data.Search);
     } catch (error) {
       console.log(error);
@@ -35,8 +33,6 @@ export const Movies = () => {
       setPage(page - 1);
     }
   };
-  
-
   return (
     <>
       <div className="heroContainer">
