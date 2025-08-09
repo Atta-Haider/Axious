@@ -1,0 +1,215 @@
+/* Homepage main container */
+.homeMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212;
+  padding: 0px 60px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect fill="%23121212" width="100" height="100"/%3E%3Cpath fill="%23f5c518" opacity="0.08" d="M50 10c-22 0-40 18-40 40s18 40 40 40 40-18 40-40S72 10 50 10zm0 60c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z"/%3E%3C/svg%3E');
+  background-size: 60px;
+}
+
+/* Gotham skyline silhouette */
+.homeMainContainer::before {
+    content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, rgba(18, 18, 18, 0.8), transparent);
+  z-index: 0;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"%3E%3Cpath fill="%231a1a1a" d="M0,100 H50,80 H100,90 H150,70 H200,85 H250,60 H300,75 H350,65 H400,80 H450,70 H500,90 H550,60 H600,80 H650,70 H700,85 H750,65 H800,80 H850,70 H900,90 H950,80 H1000,100 V100 H0 Z"/%3E%3C/svg%3E');
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* Bat-Signal spotlight effect */
+.homeMainContainer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 197, 24, 0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(1);
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.homeMainContainer:hover::after {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Left container (text and button) */
+.homeLeftContainer {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    padding-right: 20rem;
+  z-index: 1;
+}
+
+.homeLeftContainer p:first-child {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #e0e0e0;
+  margin: 0 0 10px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+}
+
+.homeLeftContainer h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 48px;
+  color: #f5c518;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(245, 197, 24, 0.5), 0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.homeLeftContainer:hover h1 {
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.homeLeftContainer p:last-of-type {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #e0e0e0;
+  margin: 0 0 20px;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.homeLeftContainer button {
+  background: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 30px;
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.homeLeftContainer button:hover {
+  background: #d4a017;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 197, 24, 0.5);
+}
+
+.homeLeftContainer button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.4s ease;
+}
+
+.homeLeftContainer button:hover::before {
+  left: 100%;
+}
+
+/* Right container (image) */
+.homeRightContainer {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.homeRightContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* Placeholder SVG for Batman-themed image */
+}
+
+.homeRightContainer:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 197, 24, 0.3);
+}
+
+/* Image overlay for cinematic effect */
+.homeRightContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+  border-radius: 12px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.homeRightContainer:hover::after {
+  opacity: 0.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .homeMainContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .homeLeftContainer,
+  .homeRightContainer {
+    margin-top: 32px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .homeLeftContainer{
+    padding: 0;
+  }
+
+  .homeLeftContainer h1 {
+    font-size: 32px;
+  }
+
+  .homeLeftContainer p:first-child {
+    font-size: 16px;
+  }
+
+  .homeLeftContainer p:last-of-type {
+    font-size: 14px;
+  }
+
+  .homeLeftContainer button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .homeRightContainer img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .homeMainContainer::after {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+  }
+}

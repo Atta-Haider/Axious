@@ -9,8 +9,6 @@ export const Details = ({data}) =>{
             </div>
             <div className="detailsContainer">
                 <p>Title: {Title}</p>
-                <p>Type: {Type}</p>
-                <p>Year: {Year}</p>
             </div>
         <button>Watch Now</button>
         </div>
